@@ -1,0 +1,11 @@
+#grad1
+{
+	height: 300px;
+	background-color: rgb(50,50,50);
+	background-image: linear-gradient(rgb(50,50,50), skyblue);
+}
+#grad2{
+	height: 175px;
+	background-color: rgb(50,50,50);
+	background-image: linear-gradient(rgb(50,50,50), rgb(165, 117, 181));
+}

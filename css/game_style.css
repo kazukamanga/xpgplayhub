@@ -1,0 +1,2136 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(34, 33, 33);
+    color: white;
+    font-family: calibri;
+    text-align: center;
+    overflow-x: hidden;/*hides horizontal scrollbar*/
+}
+.header0{
+    text-align: left;
+    font-family: BankGothic Md BT;
+    background-color: rgb(10, 50, 99, 0.999);
+    border-color: none;
+    padding-left: 10px;
+    font-size: 20px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    height: 40px;
+    padding-top: 3px;
+    animation-name: halo;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5s;
+}
+/*animation for changing header color--*/
+@keyframes halo{
+    0%{background-color: rgb(10, 50, 99, 0.999);}
+    25%{background-color: rgba(114, 0, 184, 0.999);}
+    50%{background-color: rgba(56, 56, 56, 0.999);}
+    100%{background-color: rgba(0, 0, 0, 0.999);}
+}
+.header-Logo{
+    width: 60px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+/*.line{
+    border-top: 2px solid rgb(255, 179, 0);
+    position: absolute;
+    width: 225px;
+    top: 14%;
+    left: 1.4%;
+}*/
+/*align header content to fit beside button evenly*/
+.header0 h2{
+    float: left;
+    text-align: center;
+}
+h2, .head-btn{
+    float: right;
+    text-decoration: none;
+    align-content: space-between;
+}
+.head-btn{
+    margin: 5px 40px 5px 10px;
+    padding: 1px 10px 1px 10px;
+    font-family: system-ui, sans-serif;
+    border-radius: 30px;
+    background-color: transparent;
+    color: rgb(247, 249, 250);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    border: 2px solid white;
+}
+.head-btn:hover{
+    background-color: rgb(161, 32, 90);
+    border: none;
+}
+div.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.bkg-image{
+    background-color: aquamarine;
+    background-image: url("../Images/playstation-portable.jpg");
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+/*------------Creating vdieo slider container*/
+.slideshow{
+    width: 100%;
+    background-color: none;
+    padding: 0;
+    position: relative;
+    height: 600px;
+}
+.slideshow .video-slides{
+    width: 100%;
+    height: 100%;
+}
+.video-slides{
+    background-color: white;
+    border-radius: 0;
+    position: absolute;
+    border-color: gray;
+    border-style: solid;
+    border-width: 2px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+}
+.video-slides .video-bar{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+.video-slides{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.slider-advertising{
+    position: relative;
+    bottom: 40%;
+    width: 55%;
+    left: 45%;
+    color: #ffffff;
+    text-align: right;
+    border-left: 225px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 240px solid rgba(10, 50, 99, 0.729);
+    height: 0;
+    padding: 0;
+    animation-name: halo4;
+    animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5s;
+}
+/*animation for changing color of video advertsing*/
+@keyframes halo4{
+    0%{border-bottom: 240px solid rgba(10, 50, 99, 0.729);}
+    25%{border-bottom: 240px solid rgba(114, 0, 184, 0.705);}
+    50%{border-bottom: 240px solid rgba(56, 56, 56, 0.726);}
+    100%{border-bottom: 240px solid rgba(0, 0, 0, 0.714);}
+}
+
+/*------------pagination for video slideshow-------*/
+.video-control{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50px);
+    margin-bottom: 10px;
+}
+/*Styling slideshow pagination*/
+.video-control .videoSlider-btn{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #eace44;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(247, 247, 247, 0.836);
+    transition: 0.4s ease;
+}
+.video-control .videoSlider-btn:not(:last-child){
+    margin-right: 20px;
+}
+.video-control .videoSlider-btn.active{
+    background-color: rgb(132, 79, 79);
+}
+.video-control .videoSlider-btn:hover{
+    transform: scale(1.2 );
+}
+.numberText{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    top: 0;
+    position: absolute;
+}
+#p11{
+    font-weight: 500;
+    font-size: 18px;
+    font-family: system-ui, sans-serif;
+    letter-spacing: .5px;
+    margin: 0;
+}
+.large-txt{
+    font-family: BankGothic Md BT;
+    font-size: 46px;
+    padding-top: 30px;
+    margin: 0;
+}
+.welcome{
+    margin: 0;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+}
+.header1{
+    text-align: center;
+    margin: 0;
+    font-family: BankGothic Md BT;
+    font-size: 40px;
+}
+.enter-xpg{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+#tell{
+    margin: 10px;
+    padding: 0;
+    font-weight: 400;
+    font-family: system-ui, sans-serif;
+}
+@media (max-width: 600px){
+    .content, .content2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .video-slides .slider-advertising {
+        bottom: 50%;
+        width: 100%;
+        left: 0;
+        color: #ffffff;
+        border-left: 0px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 150px solid rgba(9, 9, 9, 0.666);
+        height: 0;
+        padding-right: 5px;
+    }
+    aside, .navbar{
+        overflow-y: scroll;
+    
+    }
+    .navbar::-webkit-scrollbar{
+        width: 0;
+    }
+    .slideshow .video-slides {
+        width: 100%;
+        height: 300px;
+    }
+    .large-txt {
+        font-size: 26px;
+        text-align: right;
+    }
+    #p11 {
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0px;
+        text-align: right;
+    }
+    .navbar-toggler{
+        margin: 0;
+    }
+    .modal2 .logbox{
+        width: 350px;
+        margin: 0;
+        align-items: center;
+        padding: 20px;
+        float: center;
+    }
+    .modal1{
+        width: 50%;
+        height: 100%;
+        padding: 0;
+        align-content: center;
+        justify-content: center; 
+        background-color: transparent;
+    
+    }
+    .modal1 .registerForm{
+        overflow-y: scroll;
+        padding: 0;
+        margin: 0;
+        width: 450px;
+        height: 455px;
+        overflow-x: hidden;
+    
+    }
+    .registerForm .reg-container{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 20px;
+
+    }
+    .registerForm::-webkit-scrollbar{
+        width: 0;
+    }
+    .trapezoid{
+        border-bottom: 30px solid rgb(0, 0, 0);
+        height: 0;
+        border-right: 50px solid transparent;
+        width: 100px;
+        padding: 0;
+    }
+    .contact-heading{
+        margin: 5px; 
+        font-size: 18px;  
+        letter-spacing: 0;
+        font-weight: 400;
+    }
+    .footer-links {
+        height: 200px;
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+        width: 500px;
+    }
+    .left-column {
+        height: 300px;
+        padding: 5px;
+    }
+    .middle-column .right-column{
+        height: 300px;
+    }
+    .social-media .social-icons{
+        width: 10px;
+        height: 10px;
+        margin-bottom: 5px;
+    }
+    .social-media-items, .p2{
+        margin: 2px 0px 15px 5px;
+        font-weight: 200;
+        font-size: 12px;
+    }
+    .xpg-logo{
+        width: 200px;
+        height: 75px;
+        margin-top: 20px;
+        border-bottom: 1px solid rgb(2, 213, 255);
+    }
+}
+
+/*------register form container styling----------*/
+.registerForm{
+    width: 550px;
+    height: 700px;
+    background-color: rgb(8, 8, 8);
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(50, 90, 90);
+    padding-left: 20px;
+    padding-right: 0;
+    position: relative;
+    text-align: center;
+    float: center;
+    flex-wrap: nowrap;
+    margin-left: 400px;
+    max-width: 100%;
+}
+.reg-container{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+    overflow: auto;
+}
+.reg-container h3 p{
+    text-align: center;
+    align-content: center;
+}
+.reg-container .box-input{
+    width: calc(100% /2 - 20px);
+    text-align: start;
+    margin: 0 0 12px 0;
+    position: relative;
+}
+.box-input{
+    position: relative;
+}
+.box-input label{
+    margin-bottom: 10px;
+    display: block;
+
+}
+.box-input input{
+    background-color: transparent;
+    border-bottom: 2px solid wheat;
+    color: aliceblue; 
+    border: none;
+    border-bottom: 2px solid wheat;
+    outline: none;
+}
+.enter-label::-webkit-input-placeholder{
+    opacity: .3;
+}
+.enter-label:focus{
+    background-color: rgb(60, 53, 38);
+    outline: none;
+}
+.reg-container .Enter{
+    text-align: start;
+    background-color: transparent;
+    font-family: calibri;
+    font-size: 17px;
+}
+.Enter input{
+    width: 70%;
+    background-color: transparent;
+    border-bottom: 2px solid wheat; 
+    border: none;
+    border-bottom: 2px solid wheat;
+    color: white;
+    margin-bottom: 2px;
+}
+/*confirmation messages for password*/
+.Enter.confirmed input{
+    border-color: rgb(0, 237, 250);
+}
+/*error messages for age*/
+.box-input.failed input{
+    border-color: rgb(250, 0, 0);
+}
+/*error messages for password validation*/
+.Enter.failed input{
+    border-color: rgb(250, 0, 0);
+}
+.Enter label{
+    margin-top: 10px;
+}
+/*error messages for form validation*/
+small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgb(174, 22, 22);
+}
+.reg-container .box{
+    text-align: start;
+}
+.box input{
+    width: 75%;
+}
+.close-btn{
+    position: absolute;
+    right: 35px;
+    top: 2px;
+    font-size: 40px;
+    font-weight: bold;
+    color: bisque;
+    padding: 0;
+    margin: 0;
+}
+.close-btn:hover{
+    box-shadow: 0 0 15px rgba(218, 183, 29, 0.5);
+}
+/*----------------buttons for register form*/
+.sub-button{
+    margin: 0;
+    display: flex;
+    background-color: gold;
+    padding: 5px 50px 5px 50px;
+    border-radius: 0 10px 0 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.sub-button:hover{
+    box-shadow: 0px 0px 5px 5px rgba(243, 233, 233, 0.5);
+}
+.cancel-btn{
+    margin-left: 50px;
+    color: white;
+    font-weight: 600;
+    background-color: transparent;
+    border-style: solid;
+    border-color: bisque;
+    border-radius: 0 10px 0 10px;
+    padding: 5px 50px 5px 50px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+.cancel-btn:hover{
+    opacity: 5;
+}
+
+.modal1{
+    display: none;
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    left: 0;
+    top: 0;
+    animation: morph 0.7s;
+    backdrop-filter: blur(20px);
+    align-content: center;
+    justify-content: center;
+    z-index: 1;
+}
+/*------login panel container styling----------*/
+.logbox{
+    display: flex;
+    width: 400px;
+    height: 100vh;
+    justify-content: center;
+    margin: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 100px 20px 0 20px;
+    margin-left: 500px;
+    background-color: rgb(28, 25, 24);
+    border-radius: 10px;
+    max-width: 100%;
+}
+/*===================modal for login bock*/
+.modal2{
+    display: none;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    left: 0%;
+    top: 0%;
+    animation: morph 0.4s;
+    background-color: rgba(10, 7, 7, 0.44);
+}
+.login-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.login-box input{
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.107);
+    border: 1px solid rgb(0, 237, 250);
+}
+input[type=text], input[type=password]{
+    padding-left: 10px;
+}
+::-webkit-input-placeholder{
+    color: aliceblue;
+    opacity: 5;
+}
+::-webkit-input-pattern{
+    color: #ddd;
+}
+/*---------------------styling input color*/
+.get-into-xpg{
+    color: #ddd;
+}
+.login-btn{
+    border-radius: 30px;
+    border: none;
+    font-size: medium;
+    height: 40px;
+    outline: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.login-btn:hover{
+    box-shadow: 2px 6px 8px 2px rgba(2, 132, 225, 0.301);
+}
+.log-bottom{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    color: azure;
+    font-size: medium;
+}
+label a{
+    color: #ffffff;
+}
+/*----------------background styling forhomepage cards-------*/
+.card-image{
+    background-color: aquamarine;
+    height: 205px;
+    padding-top: 10px;
+    background-size: cover;   
+}
+.card-1{
+    background-image: url("../Images/GUEST_smash.png");
+    width: 100%;
+}
+.card-2{
+    background-image: url('../Images/Shoor-Featured-Image-Gaming-Guide-2-min.jpg');
+    margin-top: 10px;
+    width: 100%;
+}
+.card-3{
+    background-image: url('../Images/best-fun-online-games.jpeg');
+    width: 100%;
+}
+.card-4{
+    background-image: url('https://venturebeat.com/wp-content/uploads/2022/06/pokemon-go-six-billion-revenue.jpg?w=1200&strip=all');
+    width: 100%;
+}
+.card-5{
+    background-image: url('../Images/best-ps4-games.png');
+    width: 100%;
+    
+}
+.card-6{
+    background-image: url('../Images/mayhem-season.jpg');
+    margin-top: 10px;
+    width: 100%;
+}
+.content,
+.content2{
+    display: flex;
+    justify-content: center;
+}
+.card2{
+    background-color: rgba(57, 22, 61, 0.789);
+    margin: 40px;
+    height: 440px;
+    width: 350px;
+    box-shadow: 1px 1px 10px rgba(248, 232, 4, 0.655);
+}
+/*-----------------------container for GameNation Page Cards*/
+.game-container .card3{
+    background-color: white;
+    color: black;
+    margin: 10px;
+    height: 490px;
+    width: 275px;
+    border-radius: 10px;
+}
+.game-container{
+    margin:0;
+    padding: 0;
+    z-index: 0;
+}
+.game-cover{
+    height: 500px;
+    width: 275px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    z-index: 0;
+}
+.game-container .card3 .game-cover img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.swiper-wrapper .game-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vh;
+    max-height: 1200px;
+    padding: 0;
+    margin: 0;
+}
+.card3{
+    background-color: white;
+    color: black;
+    margin: 10px;
+    height: 475px;
+    width: 315px;
+    border-radius: 10px;
+}
+#p-4{
+    color: rgb(8, 22, 133);
+    margin: 0;
+    text-align: left;
+    font-weight: 400;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    padding-left: 5px;
+}
+/*--------------------for GameNation Page Filter Buttons*/
+.scroll-btn{
+    overflow: auto;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+.scroll-btn::-webkit-scrollbar{   /*this removes default scrollbar*/
+    width: 0;
+}
+.scroll-btn .control{
+    position: absolute;
+    width: 20px;
+    cursor: pointer;
+    object-fit: cover;
+}
+/*-----------------------positioning of arrow buttons*/
+.scroll-btn .prev{
+    left: 0;
+    top: 17%;
+    margin: 10px;
+    position: relative;
+}
+.scroll-btn .next{
+    right: 0;
+    top: 17%;
+    position: relative;
+    margin: 10px;
+}
+.menu-filter{
+    background-color: transparent;
+    border: 3px solid rgb(201, 4, 255);
+    padding: 8px;
+    margin: 12px;
+    border-radius: 0 10px 0 0;
+    color: white;
+    font-family: 'system-ui';
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 500;
+    opacity: .7;
+    flex-wrap: nowrap;
+}
+.menu-filter:hover{
+   opacity: 5;
+   border-color: rgb(130, 0, 117);
+}
+.swiper .game-cover{
+    height: 370px;
+    background-size: cover;  
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+.swiper .game-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*--------------------------------Name of game tga*/
+.name{
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(69, 4, 4);
+    text-align: start;
+    font-size: 16px;
+}
+/*-------------------view rent plan button*/
+.gamebar{
+    padding: 10px;
+    border-radius: 0 0 10px 0;
+    border-style: none;
+    background-color: rgb(23, 118, 118);
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.gamebar:hover{
+    color: skyblue;
+}
+/*-----------------------original cost*/
+.price{
+    text-decoration: none;
+    margin: 5px;
+    cursor: pointer;
+}
+.price:hover{
+    color: goldenrod;
+}
+.price:active{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+}
+.purchase-MyGame{
+    display: flex;
+}
+.swiper-pagination{
+    margin-top: 50px;
+    padding-top: 20px;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    padding: 20px;
+    margin: 20px;
+}
+.swiper-button-next:hover{
+    color: aquamarine;
+}
+.swiper-button-prev:hover{
+   color: aquamarine;
+}
+/*-------------Font Display GameCards*/
+#p2{
+    color: white;
+    margin: 30px;
+    text-align: start;
+}
+/*styling game rent popup*/
+.rent-popup{
+    height: 600px;
+    width: 400px;
+    background-color: rgb(29, 29, 29);
+    position: absolute;
+    right: 40%;
+    border-radius: 10px;
+    border: 2px solid rgb(119, 121, 125);
+    bottom: -3%;
+    z-index: 1;
+    animation-name: slide;
+    animation-duration: 1.5s;
+}
+@keyframes slide{
+    from {
+        bottom: 0;
+        bottom: -100%
+    }
+}
+/*animation for modal background*/
+.modal4{
+    background-color: rgba(0, 0, 0, 0.69);
+    display: none;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    left: 0%;
+    top: 0%;
+    animation-name: fade2;
+    animation-duration: .6s;
+}
+@keyframes fade2 {
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.pop-upTitle{
+    font-weight: 500;
+    color: rgb(0, 237, 250);
+    border-bottom: 1px solid rgb(0, 115, 38);
+    margin: 0px 20px 0px 20px;
+}
+#myGame{
+    font-family: system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 10px;
+    text-align: left;
+}
+.rent-Options{
+    text-align: left;
+    padding: 10px;
+    align-items: center;
+    align-content: center;
+    font-size: 18px;
+    margin-left: 30px;
+}
+.rent-Payment{
+    list-style: none;
+    margin: 0;
+    text-align: left;
+    right: 0;
+    left: 5%;
+    position: relative;
+    font-weight: 500;
+    align-items: center;
+    align-content: center;
+}
+.pay-perBox, .pay-option{
+    border: 2px solid rgb(0, 115, 38);
+    align-items: center;
+    align-content: center;
+    margin-left: 30px;
+}
+/*styling game full price popup*/
+.gamePay{
+    height: 310px;
+    width: 500px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 5px 5px 0px 0px;
+    border: 2px solid rgb(119, 121, 125);
+    z-index: 1;
+    animation-name: reveal;
+    animation-duration: .8s;
+    position: absolute;
+    bottom: -.5%;
+    right: 50%;
+}
+@keyframes reveal{
+    from {
+        bottom: 0;
+        bottom: -100%;
+    }
+}
+/*styling modal for full game popup*/
+.modal7{
+    background-color: rgba(0, 0, 0, 0.69);
+    display: none;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    left: 0%;
+    top: 0%;
+    animation-name: skatting;
+    animation-duration: .5s;
+}
+@keyframes skatting{
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.pay-Icon{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+.payPopper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding-left: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Full-head{
+    border-bottom: 1px solid rgb(115, 139, 174);
+}
+/*cancel butn for full pay popup*/
+.payment-Infull{
+    position: absolute;
+    top: 0;
+    right: 3%;
+    font-size: 24px;
+}
+.payBox, .optionPay{
+    border: 2px solid rgb(63, 63, 63);
+    align-items: center;
+    align-content: center;
+    padding: 10px 0px 10px 40px;
+    width: 400px;
+    border-radius: 5px;
+    text-align: left;
+    margin: 5px 50px 5px 0px;
+}
+.gameNation{
+    justify-content: space-between;
+}
+#Go{
+    font-weight: 600;
+    margin: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 15%;
+    right: 0;
+}
+/*close btn for rent plan popup*/
+.close-rent{
+    position: absolute;
+    font-weight: 100;
+    font-size: 30px;
+    bottom: 93%;
+    right: 5%;
+    color: rgb(244, 255, 255);
+    cursor: pointer;
+}
+/*wording style for rent pay link attribute*/
+#ps{
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0;
+}
+.pay-perBox{
+    padding: 5px 20px 5px 60px;
+}
+.pay-option{
+    padding: 5px 10px 5px 10px;
+}
+/*Papypal logo styling*/
+.method-Rent{
+    width: 30px;
+    position: absolute;
+    left: 12%;
+    height: 30px;
+}
+.Popup-Footer{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+option{
+    border: 1px solid rgb(0, 237, 250);
+    margin-bottom: 10px;
+    padding: 2px 20px 2px 10px;
+    border-radius: 5px;
+}
+#Play{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 15px;
+    letter-spacing: 1px;
+}
+#Play:hover{
+    color: rgb(77, 113, 155);
+}
+.rent-container{
+    display: flex;
+}
+/*-----------------Overlay for images*/
+.overlay{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 110%;
+    background-color: rgba(62, 104, 111, 0.8);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.card-image:hover .overlay{
+    visibility: visible;
+    animation: morph 0.5s;
+}
+/*---------------------keyframes for overlay transition on homepage cards*/
+@keyframes morph{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.game-link{
+    background-color: transparent; 
+    text-decoration: none;
+    padding: 8px;
+    color: rgba(0, 217, 255, 0.84);
+   border: 2px solid rgb(192, 153, 35);
+   cursor: pointer;
+   font-family: 'Segoe UI';
+   font-weight: 600;
+   justify-content: center;
+   align-items: center;
+   border-radius: 30px;
+}
+.game-link:hover{
+    background-color: rgba(66, 45, 159, 0.866);
+    color: #ddd;
+    transition: all ease 0.4s;
+}
+/*----------------styling contact footer*/
+.trapezoid{
+    border-bottom: 50px solid rgb(0, 0, 0);
+    height: 0;
+    border-right: 60px solid transparent;
+    width: 400px;
+    padding: 20px;
+}
+.footer-links{
+    height: 400px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+}
+/*footer contacts*/
+.left-column{
+    float: left;
+    width: 33%;
+    height: 300px;
+    padding: 10px;
+    display: flex;
+}
+.social-media .social-icons{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+.middle-column{
+    float: center;
+    width: 35%;
+    height: 400px;
+}
+.right-column{
+    float: right;
+    width: 33%;
+    height: 300px;
+}
+.social-media, .social-media-items{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.social-media-items .social-link{
+    color: #ffffff;
+    
+}
+.social-media-items .p2{
+    padding: 0;
+    margin: 5px 0px 20px 0px;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+.contact-heading{
+    margin: 30px; 
+    text-align: center; 
+    font-size: 38px; 
+    text-decoration: underline; 
+    color: rgb(255, 151, 213); 
+    letter-spacing: 1px;
+}
+.social-link:hover{
+    color: #eace44;
+}
+.Instagrammer:hover{
+    box-shadow: 0 0 1rem rgba(16, 219, 219, 0.682);
+}
+.facebook-home:hover{
+    box-shadow: 0 0 1rem rgba(16, 219, 219, 0.682);
+}.mail-Home:hover{
+    box-shadow: 0 0 1rem rgba(16, 219, 219, 0.682);
+}
+.callerHome:hover{
+    box-shadow: 0 0 1rem rgba(16, 219, 219, 0.682);
+}
+.xpg-logo{
+    width: 375px;
+    height: 120px;
+    margin-top: 70px;
+    border-bottom: 3px solid rgb(251, 2, 255);
+}
+#logo-maker{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    font-family: BankGothic Md BT;
+    color: rgb(246, 71, 255);
+    font-weight: 300;
+    font-size: 16px;
+}
+.navigation-links{
+    color: #ddd;
+}
+.navigation-links:hover{
+    color: #1d9cce;
+}
+.navigation-links:active{
+    text-decoration: overline;
+}
+.useful-links li{
+    list-style: none;
+    padding: 10px;
+}
+/*--------------------------NavBar Style*/
+aside{
+    float: right;
+    width: 183px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    transition: 0.5s;
+    margin-right: -183px;
+}
+.navbar{
+    width: 183px;
+    float: right;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: rgb(0,60,130);
+    border-left: 1px solid #ddd;
+    position: fixed;
+    border-radius: 15px 0px 0px 0px;
+    transition: 0.5s;
+    margin-right: -183px;
+    z-index: 1;
+}
+.main-content{
+    transition: 0.5s;
+}
+.nav-link:focus,
+.nav-link:hover{
+    background-color: rgb(0, 179, 255);
+    border: 2px solid white;
+}
+
+.navbar-nav .nav-item{
+    padding: 10px;
+}
+
+/*for navbar*/
+.active-nav{
+    margin-right: 0;
+}
+/*for main section*/
+.active-cont{
+    margin-right: 200px;
+}
+.nav-link:active{
+    background-color: rgb(21, 145, 145);
+}
+.navbar-nav .nav-item .nav-link{
+    text-decoration: none;
+}
+.nav-item .nav-link{
+    font-weight: 500;
+    font-size: 16px;
+}
+.nav-item .nav-link:focus,
+.nav-item .nav-link:hover{
+    font-weight: bold;
+    font-size: 17px;
+}
+.navbar-toggler .Navbar-icon{
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    top: 1%;
+    right: 1%;
+    margin: 0;
+    width: 35px;
+    height: 30px;
+    transition: .5s ease-in-out;
+    position: relative;
+    float: right;
+    z-index: 1;
+}
+
+.navbar-toggler,
+.Navbar-icon:hover{
+    box-shadow: 0px 0px 5px 5px rgba(246, 186, 255, 0.5);
+    background-color: rgb(65, 114, 178);
+}
+/*Navigaion image icons*/
+.nav-picture{
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+p{
+    color: white;
+    margin: 30px;
+    font-size: 17px;
+}
+#p7{
+    padding-top: 10px;
+    margin: 0;
+    text-align: start;
+}
+/*----------------Find Friends page*---------------/
+/*background image for page header*/
+.behind-img{               
+    background-color: aquamarine;
+    background-image: url("../Images/wave-background.jpg");
+    padding-bottom: 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1550px;
+}
+#body2{
+    background-color: rgba(32, 41, 51, 0.967);
+    color: white;
+    font-family: calibri, BankGothic Md BT;
+    text-align: center;
+}
+.graphics{
+    background-color: rgba(2, 14, 49, 0.701);
+    width: 400px;
+    height: 40px;
+    float: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    justify-content: center;
+    border: 1px solid rgb(16, 219, 219);
+    text-align: center;
+    border-left: none;
+    border-top: none;
+}
+.userprofile{
+    background-color: rgb(162, 52, 176);
+    width: 200px;
+    height: 39.5px;
+    margin: 0;
+    padding: 0;
+}
+#p8{
+    float: right;
+    padding-left: 5px;
+    margin: 8px 10px 10px 10px;
+    text-align: center;
+    font-weight: 300;
+    font-size: medium;
+    opacity: .7;
+    border-left: 2px solid rgb(216, 246, 246);
+}
+.profile-img{
+    float: left;
+    border-left: 3px solid #4f234f;
+    border-top: 3px solid #5c2d5c;
+    margin-right: 10px;
+}
+.friend-list{
+    background-color: rgba(49, 6, 93, 0.09);
+    height: 550px;
+    width: 500px;
+    float: center;
+    overflow: auto;
+    white-space: nowrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+.friend-list::-webkit-scrollbar{
+    width: 0;
+}
+.card9{
+    color: rgb(255, 255, 255);
+    margin: 15px;
+    height: 45px;
+    width: 390px;
+    border-radius: 30px 0px 5px 20px;
+}
+.friend-list .card9{
+    background-color: rgba(0, 0, 0, 0.251);
+    color: rgb(255, 255, 255);
+    margin: 15px;
+    height: 45px;
+    width: 95%;
+}
+.filephoto .profile-img{
+    background-color: aquamarine;
+    height: 52px;
+    width: 55px;
+    border: none;
+    border-radius: 200px 0px 200px 200px;
+}
+.friend-list .card9 .filephoto .profile-img{
+    object-fit: cover;
+}
+.default-text, #p1{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 12px;
+    text-align: left;
+}
+.default-text{
+    background-color: #32b3debc;
+    margin-left: 20px;
+    width: 250px;
+}
+.default-text h5{
+    font-weight: 500;
+    font-size: 14px;
+}
+/*-----------------chat icon styling--------------*/
+.chat-toggler .chatbar{
+    float: right;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+.chat-toggler{
+    float: right;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    transition: .4s;
+}
+.chat-toggler:active{
+    transform: scale(.9);
+}
+/*===================modal for chat box*/
+/*---------------------------styling chatbox*/
+.chatbox{
+    flex: 1;
+    bottom: 1%;
+    right: 0;
+    overflow: hidden;
+    /*transform: scale(0);
+    transform-origin: right;*/
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    left: 50%;
+    position: absolute;
+    float: right;
+}
+
+.chatbox.show{
+    transform: scale(1);
+}
+.pro-chatter{
+    background-color: rgb(69, 69, 69);
+    width: 450px;
+    border-radius: 0px 10px 10px 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    height: 545px;
+    margin: 0;
+}
+.chatbox .chat-header{
+    width: 100%;
+    height: 55px;
+    background-color: rgb(49, 47, 47);
+    border-radius: 0px 10px 0px 0px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.message-profile .msg-status{
+    padding:0;
+    margin: 0;
+    color: rgb(152, 153, 153);
+}
+.message-row{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding: 5px;
+    width: 90%;
+}
+.friend-picture{
+    float: left;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+.textmsg.messager{
+    justify-content: flex-end;
+    background-color: #9010af;
+}
+.textmsg{
+    font-weight: 300;
+    border-radius: 0px 0px 10px 10px;
+    flex-basis: 70%;
+    padding: 5px 15px;
+}
+.textmsg.msg-received{
+    background-color: rgb(119, 121, 125);
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: .25rem .25rem 1rem rgba(15, 15, 15, 0.377);
+}
+.user-img{
+    border-radius: 50%;
+    margin:0 20px;
+}
+.message-sent{
+    padding: 5px;
+    background-color: rgb(63, 61, 61);
+    margin-top: 170px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgb(0, 237, 250);
+}
+.input-message{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: transparent;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 350;
+    resize: none;
+}
+.Zero-messages{
+    color: black;
+    font-weight: 500;
+    text-align: center;
+}
+.input-message::-webkit-scrollbar{
+    width: 0;
+}
+.close-msg{
+    font-size: 50px;
+    color: #eace44;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    left: 26%;                     /*positioning of close chat icon ------*/
+    top: 3%;                        /*positioning of close chat icon ------*/
+}
+.page{
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.textmsg #p13{
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+.report-chat-toggle{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 5px;
+    height: 5px;
+    
+}
+.report-chat-menu{
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 3px;
+    background-color: aliceblue;
+    width: 90px;
+    transform: scale(0);              /*report menu is hidden as scale is set to 0, 
+                                       vertical dot icon will be used to open menu*/
+    transition: .3s;
+    transform-origin: top right;
+}
+.report-chat-menu.show{
+    transform: scale(1);
+}
+.report-chat-menu a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #1b1708;
+    font-weight: 500;
+    display: block;
+}
+.report-chat-menu a:hover{
+    background-color: rgb(172, 172, 172);
+}
+.message-time{
+    float: right;
+    font-size: 12px;
+}
+.msg-icon{
+    width: 100%;
+    object-fit: cover;
+}
+.send-msg{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin: 8px;
+    cursor: pointer;
+}
+
+/*********Styling 'My Profile' Page**************/
+.Myprofile{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    float: right;
+    margin: 0;
+    width: 500px;
+    height: 600px;
+    position: fixed;
+}
+.Myprofile .card5{
+    height: 100%;
+    background-color: rgba(31, 31, 31, 0.707);
+    border-radius: 20px 20px 0px 0px;
+    position: fixed;
+}
+.card5 .profile-header{
+    width: 100%;
+}
+.profile-header{
+    background-color: #82166b;
+    height: 100px;
+    padding-top: 30px;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 120px;
+}
+.profile-header .profile-name{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: #ffffff;
+}
+.profile-photo{
+    border-radius: 50%;
+    border: 2px solid rgb(59, 8, 199);
+    margin: 10px;
+}
+.user-details{
+    color: #faf9f4;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    float: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 50px;
+}
+.profile-label{
+    font-weight: 600;
+    font-family: system-ui, sans-serif;
+    margin-bottom: 25px;
+    padding-right: 10px;
+}
+.edit-input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #ddd;
+    border-bottom: 1px solid white;
+}
+.biography{
+    width: 300px;
+    color: #1b1708;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid aquamarine;
+    resize: none;
+    background-color: rgb(220, 220, 220);
+}
+.language{
+    width: 200px;
+    outline: none;
+    border-bottom: 2px solid white;
+    background-color:rgb(38, 38, 38);
+    color: white;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid white;
+}
+.transparent-bkg{
+    background-image: url('../Images/injustice1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.video-gallery {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-left: 500px;
+    position: relative;
+}
+.video-gallery .My-vidoes{
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 166px;
+    position: relative;
+}
+.entertainemnt{
+    height: 400px;
+    width: 100%;
+    overflow: scroll;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-left: 500px;
+    position: relative;
+}
+.video-game-header{
+    float: center;
+    margin-left: 500px;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #1d70ce;
+}
+.entertain-header{
+    float: center;
+    margin-left: 500px;
+    width: 100%;
+    text-align: center;
+    background-color: #1d6dce;
+    border-radius: 30px;
+}
+.video-row1{
+    display: flex;
+}
+.video-row2{
+    display: flex;
+}
+.video-center{
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 166px;
+    position: relative;
+}
+.video-gallery::-webkit-scrollbar{
+    width: 0;
+}
+.entertainemnt::-webkit-scrollbar{
+    width: 0;
+}
+.biography::-webkit-scrollbar{
+    width: 0;
+}
+.biography::-webkit-input-placeholder{
+    color: #403b3b;
+}
+.icon-save{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    opacity: .8;
+    margin-left: 5px;
+}
+.watch-vidoes{
+    height: 600px;
+    width: 900px;
+    background-color: transparent;
+}
+/*iframe{
+    background-color: #033b52;
+}*/
+video{
+    width: 450px;
+    height: 400px;
+}
+/*********Styling Events Page**************/
+.main7{
+    height: 100%;
+}
+.events-container{
+    background-color: #1b170899;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 200px;
+}
+.event-poster{
+    background-color: #7b7b7b;
+    height: 100%;
+    width: 400px;
+    border-top: 5px solid goldenrod;
+    object-fit: cover;
+    border-bottom: 10px solid rgb(173, 3, 139);
+}
+.parrellogram{
+    border-bottom: 25px solid rgb(173, 3, 139);
+    border-right: 20px solid transparent;
+    height: 0;
+    width: 200px;
+    position: relative;
+    bottom: 4%;
+}
+.promo{
+    width: 100%;
+    height: 100%;
+}
+.event-details{
+    width: 590px;
+    height: 575px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    margin: 10px;
+    padding: 10px;
+    align-items: start;
+}
+.event-title{
+    font-weight: 500;
+    text-align: left;
+    margin: 10px;
+    font-size: 26px;
+}
+.event-wording{
+    text-align: left;
+    margin: 6px;
+    font-weight: 400;
+    font-family: system-ui, sans-serif;
+    font-size: 16px;
+}
+.event-background{
+    background-image: url('../Images/gaming.png');
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    background-size: cover;
+}
+.event-date{
+    font-weight: 300;
+    font-size: 14px;
+    text-align: left;
+    margin: 70px 0px 0px 0px;
+}
+.background-blur{
+    backdrop-filter: blur(10px);
+}
+/*********Styling Contact Us Page**************/
+.coloring-header{
+    background-color: #1d9cce;
+}
+#main14{
+    background-color: rgb(59, 74, 93);
+}
+.contact-info-cont{
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+.xpg-contact{
+    display: flex;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 600px;
+}
+.card4{
+    width: 600px;
+    height: 600px;
+    background-color: rgb(233, 232, 231);
+    left: 30%;
+    border-radius: 7px 40px 7px 40px;
+    margin-top: 15px;
+    color: #6f3302;
+    padding: 30px 10px 10px 30px;
+    margin-left: 80px;
+    
+}
+/*comment-form*/
+.xpg-contact{
+    width: 100%;
+}
+.contact-panel{
+    margin-bottom: 40px;
+    margin-right: 50px;
+}
+
+/*formating comments textare*/
+.add-comment::-webkit-scrollbar{
+    width: 0;
+}
+.add-comment::-webkit-input-placeholder{
+    color: #1b1708;
+    padding-left: 10px;
+    opacity: .7;
+}
+.add-comment{
+    height: 200px;
+    margin: 50px 175px 0px 0px;
+    outline: none;
+    border-radius: 0px 20px ;
+    background-color: transparent;
+    color: rgb(1, 9, 19);
+    padding: 5px;
+    width: 300px;
+    resize: none;
+}
+.problem-label{
+    float: left;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: system-ui, sans-serif;
+
+}
+.suggest-input{
+    margin: 20px 0px 5px 50px; 
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    border: .5px solid gray;
+    height: 35px;
+    width: 400px;
+}
+.suggest-input::-webkit-input-placeholder{
+    color: #1b1708;
+    opacity: .7;
+}
+/*--Report Buttons-*/
+input[type=submit]{
+    background-color: #eace44;
+    border: none;
+    width: 50px;
+    float: right;
+    border-radius: 5px;
+    height: 34px;
+    margin: 20px 10px 0px 0px;
+}
+.send-comment{
+    background-color: #12b528e4;
+    width: 70px;
+    padding: 4px;
+    outline: none;
+    border: none;
+    border-radius: 30px 0px 0px 0px;
+    color: #ffffff;
+    font-weight: 700;
+    left: 55.5%;
+    top: 86%;
+    position: absolute;
+    box-shadow: .1rem .1rem .5rem 1px rgb(152, 153, 153);
+
+}
+/*styling contact info side bar*/
+.contact-info-pillar{
+    float: left;
+    background-color: rgb(115, 139, 174);
+    height: 750px;
+    margin: 100px 0px 0px 30px;
+    position: fixed;
+    border-radius: 15px 15px 0px 0px;
+    width: 300px;
+    background-image: linear-gradient(rgba(155, 187, 255, 0.701),rgb(47, 55, 65));
+    padding: 0;
+
+}
+.logo-container{
+    width: 255px;
+    height: 200px;
+    background-color: rgb(0, 0, 0);
+    margin: 20px;
+    align-content: center;
+    object-fit: cover;
+    padding: 0;
+    align-items: center;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(0, 0, 0),rgba(241, 146, 4, 0.544));
+}
+/*styling contact pillar icon link*/
+.social-contact{
+    list-style: none;
+    float: left;
+    margin: 0;
+}
+.caller-icon{
+    width: 22px;
+    height: 22px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.company-logo{
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+}
+.media-contacts{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.info{
+    margin: 2px 0px 15px 10px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.description .know{
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: absolute;
+    bottom: 15%;
+}
+/*********Styling About XPG Page**************/
+#main2{
+    background-color: rgb(72, 69, 75);
+}
+.contain-vtdi{
+    width: 410px;
+    height: 230px;
+    background-color: rgb(72, 69, 75);
+    position: relative;
+}
+.photo-container{
+    position: absolute;
+    width: 450px;
+    height: 230px;
+    left: 55%;
+    bottom: -27%;
+    background-color: rgb(72, 69, 75);
+    z-index: 0;
+}
+.About-XPG{
+    color: rgb(210, 209, 224);
+    font-weight: 600;
+    font-size: 26px;
+    width: 600px;
+    position: relative;
+    left: 20%;
+    text-align: center;
+    text-decoration: overline;
+}
+.xpg-genesis{
+    background-color: transparent;
+    width: 950px;
+    margin-left: 20%;
+    padding: 10px;
+    background-color: rgb(127, 143, 152);
+    border-radius: 10px;
+}
+.history{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    right: 20%;
+    width: 1000px;
+    height: 220px;
+}
+/*second picture styling*/
+.about-journey{
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    left: 3%;
+    bottom: 6%;
+}
+#pd{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: system-ui, sans-serif
+}
+.history-continue{
+    padding-bottom: 40px;
+}
+/*first picture styling*/
+.ourstory{
+    width: 400px;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 1%;
+    bottom: 0;
+    z-index: 0;
+}
+/*footer for contact us page*/
+.footer0{
+    text-align: center;
+    background-color: none;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    height: 100px;
+    margin-top: 100px;
+}
+.footer1{
+    padding: 10px;
+}
+#footer2{
+    text-align: center;
+    float: center;
+    background-color: none;
+    padding-top: 15px;
+    height: 150px;
+    width: 100%;
+}
+#footer3{
+    text-align: center;
+    float: center;
+    background-color: rgba(32, 41, 51, 0.967);
+    padding-top: 100px;
+    width: 100%;
+    height: 200px;
+}
+.footer4{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    float: center;
+    background-color: #1b1708;
+    margin-top: 45px;
+    padding: 10px;
+}
+/*------------------------------This is gradient*/
+#grad1{
+    height: 50px;
+    background-color: rgb(50,50,50);
+    background-image: linear-gradient(rgb(0, 0, 0),skyblue);
+}
+#grad2{
+    height: 300px;
+    background-color: rgb(50,50,50);
+    background-image: linear-gradient(rgb(50,50,50,),violet);
+}
